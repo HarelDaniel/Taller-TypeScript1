@@ -1,4 +1,34 @@
-"use strict";
-let message = 'Hello World';
-console.log(message);
-document.getElementsByTagName("h1")[0].innerHTML = "Hola desde Typescript";
+import { series } from "./data.js";
+
+var seriesTable = document.getElementById("series");
+var averageTable = document.getElementById("average");
+
+mostrarDatosSeries(series);
+mostrarAverage(series);
+
+function mostrarDatosSeries(series) {
+    var tbodySerie = document.createElement("tbody");
+    for (var _i = 0, series_1 = series; _i < series_1.length; _i++) {
+        var serie = series_1[_i];
+        var trElement = document.createElement("tr");
+        trElement.innerHTML = "<td>".concat(serie.index, "</td>\n        <td>").concat(serie.name, "</td>\n        <td>").concat(serie.channel, "</td>\n        <td>").concat(serie.seasons, "</td>");
+        tbodySerie.appendChild(trElement);
+    }
+    seriesTable.append(tbodySerie);
+}
+function mostrarAverage(series) {
+    var average = darAverage();
+    var trElement = document.createElement("tr");
+    trElement.innerHTML = "<tr><b> Seasons Average: </b></td><td>".concat(average, "</td>");
+    averageTable.appendChild(trElement);
+}
+function darAverage() {
+    var average = 0;
+    var total = 0;
+    for (var index = 0; index < data_js_1.series.length; index++) {
+        var serie = data_js_1.series[index];
+        total += serie.seasons;
+    }
+    average = total / data_js_1.series.length;
+    return average;
+}
