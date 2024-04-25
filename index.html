@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'> 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Document</title>
     <link rel='icon' href='data:,'>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -10,17 +11,22 @@
 <body>
     <h1>Ejemplo Basico</h1>
     <h2>Taller TypeScript</h2>
+
     <script type= "module" src='./helloworld.js'></script>
-    <script src="data.js"></script>
-    <table class="table table-dark">
-        <thead>
-          <tr>
-            <th scope="col">#</th>
-            <th scope="col">Name</th>
-            <th scope="col">Channel</th>
-            <th scope="col">Seasons</th>
-          </tr>
-        </thead>
-      </table>
+    <script src="./data.js"></script>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-9">
+          <table class="table table-dark" id="series">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Name</th>
+                <th scope="col">Channel</th>
+                <th scope="col">Seasons</th>
+              </tr>
+            </thead>
+          </table>
+  <table class="table" id="average"></table>
 </body>
 </html>

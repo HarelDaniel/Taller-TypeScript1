@@ -11,10 +11,11 @@ function mostrarDatosSeries(series: Serie[]): void{
     let tbodySerie = document.createElement("tbody");
     for(let serie of series){
         let trElement: HTMLElement = document.createElement("tr");
-        trElement.innerHTML=`<td>${serie.index}</td>
-        <td>${serie.name}</td>
-        <td>${serie.channel}</td>
-        <td>${serie.seasons}</td>`
+        trElement.innerHTML=
+        `<td>${serie.index}</td>
+         <td>${serie.name}</td>
+         <td>${serie.channel}</td>
+         <td>${serie.seasons}</td>`
         tbodySerie.appendChild(trElement);
     }
     seriesTable.append(tbodySerie)

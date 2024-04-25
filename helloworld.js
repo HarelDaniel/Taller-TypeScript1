@@ -1,4 +1,5 @@
 import { series } from "./data.js";
+//import { Serie } from "./serie.js";
 
 var seriesTable = document.getElementById("series");
 var averageTable = document.getElementById("average");
@@ -25,10 +26,10 @@ function mostrarAverage(series) {
 function darAverage() {
     var average = 0;
     var total = 0;
-    for (var index = 0; index < data_js_1.series.length; index++) {
-        var serie = data_js_1.series[index];
+    for (var index = 0; index < series.length; index++) {
+        var serie = series[index];
         total += serie.seasons;
     }
-    average = total / data_js_1.series.length;
+    average = total / series.length;
     return average;
 }
